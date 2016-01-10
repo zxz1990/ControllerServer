@@ -3,12 +3,14 @@ package com.zxz.controllerserver.main;
 import java.io.IOException;
 
 import com.zxz.controllerserver.logic.MainLogic;
+import com.zxz.controllerserver.test.LogicTest;
 import com.zxz.controllerserver.ui.impls.MainUI;
 
 public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+//		LogicTest.Test();
 		MainLogic logic;
 		try {
 			logic = new MainLogic(6666);

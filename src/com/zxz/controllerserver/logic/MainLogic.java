@@ -1,15 +1,8 @@
 package com.zxz.controllerserver.logic;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.URISyntaxException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.logging.Logger;
 
 import com.zxz.controllerserver.ui.interfaces.INotifier;
@@ -74,7 +67,8 @@ public class MainLogic {
 					try {
 						log.info("MainLogic Thread:" + Thread.currentThread().getId());
 						Socket socket = mServer.accept();
-						SocketLogic.procSocket(socket);
+						SocketLogic logic= new SocketLogic();
+						logic.procSocket(socket);
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						log.info("IOException");
